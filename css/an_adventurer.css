@@ -1,0 +1,87 @@
+html {
+    background-color: palevioletred;
+}
+
+body {
+    overflow: overlay;
+}
+
+*::-webkit-scrollbar {
+    background-color: transparent;
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-color: rgba(0,0,0,0.3);
+    background-clip: content-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+header a {
+    font-weight: bold;
+}
+
+nav {
+    position: fixed;
+    background-color: rgb(216, 171, 112);
+    color: #333;
+    margin-top: 0.5em;
+    width: 100%;
+    overflow: overlay;
+}
+
+nav ul {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+    justify-content: space-around;
+}
+
+main {
+    background-color: rgb(112, 216, 199);
+    color: #333;
+    display: inline;
+}
+
+aside {
+    background-color: rgb(70, 136, 125);
+    color: rgb(177, 250, 238);
+}
+
+section {
+    background-color: rgb(157, 248, 233);
+    color: #333;
+}
+
+footer {
+    background-color: rgb(112, 58, 76);
+    width: 100%;
+    color: rgb(250, 150, 184);
+}
+
+#wrapper {
+    position: relative;
+    display: flex;
+    height: 95vh;
+    width: 100%;
+    flex-direction: row;
+}
+
+#wrapper p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
