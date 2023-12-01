@@ -7,10 +7,13 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    flex-direction: column;
 }
 
 .calendar {
     display: grid;
+    position: relative;
+    top: 1.5em;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
     max-width: 600px;

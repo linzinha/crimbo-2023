@@ -18,6 +18,7 @@ h1, h2, h3 {
 
 a {
     text-decoration: none;
+    color: #b06dc9;
 }
 
 
@@ -34,9 +35,11 @@ header {
 
 
 aside {
-    height: 95vh;
+    position: relative;
+    height: 97vh;
     width: 20%;
-    padding: 0.5em;
+    padding: 1.5em;
+    top: -1em;
 }
 
 main {
@@ -66,7 +69,6 @@ footer {
     position: sticky;
     bottom: 0;
     z-index: 1000;
-    background-color: #7da0c9;
     padding: 0 2em;
 }
 
@@ -74,7 +76,6 @@ footer {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff; /* Button background color */
     color: #fff; /* Button text color */
     border: none;
     border-radius: 4px;
@@ -105,7 +106,7 @@ img {
 
 /* 0.2 == 20% of the total height minus the header + footer heights */
 #row-1 {
-    height: calc((100vh - 1em)*0.3);
+    height: calc((100vh - 1em)*0.2);
     /* styles set lower overwrite earlier settings */
     justify-content: center;
     flex-direction: column;

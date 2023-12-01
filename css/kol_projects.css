@@ -1,0 +1,27 @@
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px; /* Add padding to the container */
+    border: 1px solid #ccc; /* Add border for clarity */
+    height: 50%;
+    overflow: scroll;
+}
+
+.project a {
+    padding: 5px 0;
+}
+
+.project h3 {
+    padding: 25px 0 5px 0;
+}
+
+fieldset {
+    max-width: 50%;
+}

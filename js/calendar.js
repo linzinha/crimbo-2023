@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Check if the day is in the future
         if (currentDate > today) {
-            console.log("Future Date")
+            console.log(currentDate + "Future Date")
         }
         
         // Create expander content
@@ -40,7 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
         expanderContent.className = 'expander-content';
 
         // Customize the content for each date
-        expanderContent.textContent = `Content for ${currentDate.toDateString()}`;
+        if (currentDate > today) {
+            expanderContent.textContent = `No Peeking!`;
+        } else {
+            expanderContent.textContent = `Content for ${currentDate.toDateString()}`;
+        }
+        
         expander.appendChild(expanderContent);
         dayElement.appendChild(expander);
         

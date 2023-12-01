@@ -1,9 +1,6 @@
-html {
-    background-color: palevioletred;
-}
-
 body {
     overflow: overlay;
+    background-color: rgb(112, 216, 199);
 }
 
 *::-webkit-scrollbar {
@@ -33,33 +30,38 @@ header a {
 
 nav {
     position: fixed;
-    background-color: rgb(216, 171, 112);
+    background-color: rgba(0,0,0,0.2);
     color: #333;
-    margin-top: 0.5em;
+    margin-top: 1em;
     width: 100%;
     overflow: overlay;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: rgb(96 9 116);
 }
 
 nav ul {
     display: inline-flex;
     justify-content: space-around;
-    width: 100%;
+    width: 80%;
+    justify-self: flex-end;
 }
 
 nav ul li {
     display: inline;
-    justify-content: space-around;
 }
 
 main {
-    background-color: rgb(112, 216, 199);
     color: #333;
     display: inline;
 }
 
 aside {
     background-color: rgb(70, 136, 125);
-    color: rgb(177, 250, 238);
+    color: rgb(164 207 203);
 }
 
 section {
@@ -68,9 +70,10 @@ section {
 }
 
 footer {
-    background-color: rgb(112, 58, 76);
+    background-color: rgba(0,0,0,0.3);
     width: 100%;
-    color: rgb(250, 150, 184);
+    color: rgb(186, 241, 239);
+    text-align: center;
 }
 
 #wrapper {
