@@ -9,11 +9,10 @@ export async function onRequestPost(context) {
     // Extract user ID and user data from the form
     const playername = input.get('playername');
     const playerid = input.get('playerid');
-    const userData = input.get('userData');
 
     // Create a KV pair
     const kvKey = `${playername}:${playerid}`;
-    await namespaceId.put(kvKey, userData);
+    await namespaceId.put(kvKey);
 
     // Return a response indicating success
     return new Response('KV pair created successfully', {
