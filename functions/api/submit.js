@@ -1,7 +1,7 @@
 /**
  * POST /api/submit
  */
-
+const namespaceId = namespaceId;
 export async function onRequestPost(context) {
   try {
     let input = await context.request.formData();
@@ -13,7 +13,7 @@ export async function onRequestPost(context) {
 
     // Create a KV pair
     const kvKey = `${playername}:${playerid}`;
-    await fd54ed96cae7443b828873e6deeffbe9.put(kvKey, userData);
+    await namespaceId.put(kvKey, userData);
 
     // Return a response indicating success
     return new Response('KV pair created successfully', {
