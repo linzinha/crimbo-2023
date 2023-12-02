@@ -24,8 +24,19 @@
     <div id="wrapper">
         <aside>
             <h2>News and Updates</h2>
-            <p><time datetime="2023-11-19">November 19th</time></p>
-            First Published version of this site, it is terrible but we persevere.
+            <p><strong><time datetime="2023-12-02">December 2nd</time></strong></p>
+            <p>
+                <ul>
+                    <li>Upgraded to incredible 3 Column technology</li>
+                    <li>Added a submit button. It may not work yet but it looks nice?</li>
+                </ul>
+            </p>
+            <p><strong><time datetime="2023-11-19">November 19th</time></strong></p>
+            <p>
+                <ul>
+                    <li>First Published version of this site, it is terrible but we persevere.</li>
+                </ul>
+            </p>
         </aside>
         <main>
             <article id="row-1">
@@ -39,221 +50,236 @@
 
             </article>
             <article id="row-2">
-                <section>
-                    <h2>FAQ</h2>
-                    <h3>How can I play?</h3>
-                    <p>
-                        It's easy! Just message me in game or in Discord and I will confirm when I add you to the players list
-                    </p>
-                    <h3>How does it work?</h3>
-                    <p>
-                        Each day I will randomize an item and a player and give a gift to that player. NOTE: the item drawn may be a REPRESENTATION of the prize, but it will always be of greater value in that case. For example if you land on an IOTM I won't give you a consumable from said item. But if you land on a consumable it may be part of a pack of items.
-                    </p>
-                    <h3>Can I contribute?</h3>
-                    <p>
-                        If you like! However contributions are neither expected nor required. You can either send me items to add to my Display Case (the official prize vault), OR if you prefer to do so for high value items you can promuise to deliver the item to the winner. In that case I will list your ingame name next to the item to ID you as the owner of the prize.
-                    </p>
-                    <p>Currently the prizes are based on what I can afford so if anyone wants to donate they can (no pressure) and the prizes will get better. If people choose to donate I will start a page with a list of donors and ow their donations were used.</p>
-                    <h3>Is there a way to get extra entries?</h3>
-                    <p>
-                        <strong>Maybe</strong>. I am considering a few possibilities, but none of them involve being able to buy more entries for personal gain. I don't want it to be weighted toward already rich players.
-                    </p>
-                    </section>
-                <section>
-                    <h2>Players</h2>
-                    <p>Make sure your name is here and your player number is correct!</p>
-                    <li>Alium (#1933235)</li>
-                    <li>Ancientofearth (#192145)</li>
-                    <li>Archduke of Artichokes (#2582373)</li>
-                    <li>Asmodais (#2071543)</li>
-                    <li>Celaskeir (#2043855)</li>
-                    <li>Clawleone (#3676749)</li>
-                    <li>CZARWHUZHERE666 (#1606598)</li>
-                    <li>DizzyJ (#2428066)</li>
-                    <li>Electricity Bill Collector (#3469229)</li>
-                    <li>Fargblabble (#3574897)</li>
-                    <li>Fluffy the Destroyer of Worlds (#1877123)</li>
-                    <li>freddyjoehanson (#644996)</li>
-                    <li>Gawea (#2341947)</li>
-                    <li>haha4 (#2038473)</li>
-                    <li>hedgemonster (#2270868)</li>
-                    <li>Jimmyking (#3272033)</li>
-                    <li>JLE (#169283)</li>
-                    <li>JuneM (#3678443)</li>
-                    <li>Justin Smoak (#2486007)</li>
-                    <li>MARCOP0LO (#3615015)</li>
-                    <li>Mistress of the Obvious (#845708)</li>
-                    <li>Moon Moon (#2437075)</li>
-                    <li>Norimvo (#3451900)</li>
-                    <li>Oracle_163 (#2466130)</li>
-                    <li>panic lord (#1969963)</li>
-                    <li>penshoppe_91 (#1498748)</li>
-                    <li>Prusias (#3235855)</li>
-                    <li>SadOatcakes (#886792)</li>
-                    <li>Sheber (#2949208)</li>
-                    <li>Shiverwarp (#1686426)</li>
-                    <li>Somebody314 (#1960621)</li>
-                    <li>Spectrolite (#3582355)</li>
-                    <li>Spileckalicious (#2145263)</li>
-                    <li>StopThatTimeRave (#2770690)</li>
-                    <li>SwaggerFortune (#3268818)</li>
-                    <li>SwimmingBear (#3414657)</li>
-                    <li>The Patron Saint of Depravity (#1581073)</li>
-                    <li>troubletop (#3194639)</li>
-                    <li>Vulcan9009 (#2038091)</li>  
+                <section id="column-a">
+                    <section>
+                        <h2>FAQ</h2>
+                        <h3>How can I play?</h3>
+                        <p>
+                            It's easy! Just message me in game or in Discord and I will confirm when I add you to the players list
+                        </p>
+                        <form method="POST" action="/api/submit">
+                            <label for="playername">Player Name</label>
+                            <input id="playername" type="text" name="playername" required />
+                          
+                            <label for="playerid">Player ID</label>
+                            <input id="playerid" type="number" name="playerid" required />
+                          
+                            <button type="submit">Submit</button>
+                          </form>
+                        <h3>How does it work?</h3>
+                        <p>
+                            Each day I will randomize an item and a player and give a gift to that player. NOTE: the item drawn may be a REPRESENTATION of the prize, but it will always be of greater value in that case. For example if you land on an IOTM I won't give you a consumable from said item. But if you land on a consumable it may be part of a pack of items.
+                        </p>
+                        <h3>Can I contribute?</h3>
+                        <p>
+                            If you like! However contributions are neither expected nor required. You can either send me items to add to my Display Case (the official prize vault), OR if you prefer to do so for high value items you can promuise to deliver the item to the winner. In that case I will list your ingame name next to the item to ID you as the owner of the prize.
+                        </p>
+                        <p>Currently the prizes are based on what I can afford so if anyone wants to donate they can (no pressure) and the prizes will get better. If people choose to donate I will start a page with a list of donors and ow their donations were used.</p>
+                        <h3>Is there a way to get extra entries?</h3>
+                        <p>
+                            <strong>Maybe</strong>. I am considering a few possibilities, but none of them involve being able to buy more entries for personal gain. I don't want it to be weighted toward already rich players.
+                        </p>
+                        </section>
                 </section>
-                <section>
-                    <h2>Prizes</h2>
-                    This is a list of items included in the giveaway. For more inforation on what you may receive, see the FAQ
-                    <h3>Donated Items</h3>
-                    <li>festive holiday hat x3 - MARCOP0LO (#3615015)</li>
-                    <p>More to be added in 375 adventures</p>
+                <section id="column-b">
+                    <section>
+                        <h2>Players</h2>
+                        <p>Make sure your name is here and your player number is correct!</p>
+                        <li>Alium (#1933235)</li>
+                        <li>Ancientofearth (#192145)</li>
+                        <li>Archduke of Artichokes (#2582373)</li>
+                        <li>Asmodais (#2071543)</li>
+                        <li>Celaskeir (#2043855)</li>
+                        <li>Clawleone (#3676749)</li>
+                        <li>CZARWHUZHERE666 (#1606598)</li>
+                        <li>DizzyJ (#2428066)</li>
+                        <li>Electricity Bill Collector (#3469229)</li>
+                        <li>Fargblabble (#3574897)</li>
+                        <li>Fluffy the Destroyer of Worlds (#1877123)</li>
+                        <li>freddyjoehanson (#644996)</li>
+                        <li>Gawea (#2341947)</li>
+                        <li>haha4 (#2038473)</li>
+                        <li>hedgemonster (#2270868)</li>
+                        <li>Jimmyking (#3272033)</li>
+                        <li>JLE (#169283)</li>
+                        <li>JuneM (#3678443)</li>
+                        <li>Justin Smoak (#2486007)</li>
+                        <li>MARCOP0LO (#3615015)</li>
+                        <li>Mistress of the Obvious (#845708)</li>
+                        <li>Moon Moon (#2437075)</li>
+                        <li>Norimvo (#3451900)</li>
+                        <li>Oracle_163 (#2466130)</li>
+                        <li>panic lord (#1969963)</li>
+                        <li>penshoppe_91 (#1498748)</li>
+                        <li>Prusias (#3235855)</li>
+                        <li>SadOatcakes (#886792)</li>
+                        <li>Sheber (#2949208)</li>
+                        <li>Shiverwarp (#1686426)</li>
+                        <li>Somebody314 (#1960621)</li>
+                        <li>Spectrolite (#3582355)</li>
+                        <li>Spileckalicious (#2145263)</li>
+                        <li>StopThatTimeRave (#2770690)</li>
+                        <li>SwaggerFortune (#3268818)</li>
+                        <li>SwimmingBear (#3414657)</li>
+                        <li>The Patron Saint of Depravity (#1581073)</li>
+                        <li>troubletop (#3194639)</li>
+                        <li>Vulcan9009 (#2038091)</li>  
+                    </section>
+                </section>
+                <section id="column-c">
+                    <section>
+                        <h2>Prizes</h2>
+                        This is a list of items included in the giveaway. For more inforation on what you may receive, see the FAQ
+                        <h3>Donated Items</h3>
+                        <li>festive holiday hat x3 - MARCOP0LO (#3615015)</li>
+                        <p>More to be added in 375 adventures</p>
 
-                    <li>abominable snowcone</li>
-                    <li>agua de vida</li>
-                    <li>antimatter wad</li>
-                    <li>Atomic Pop</li>
-                    <li>autumnal aegis</li>
-                    <li>black and white cracker</li>
-                    <li>blue snowcone</li>
-                    <li>Boris's key lime</li>
-                    <li>borrowed time</li>
-                    <li>bottle of antifreeze</li>
-                    <li>box of Familiar Jacks</li>
-                    <li>Bright Water</li>
-                    <li>bubblegum heart</li>
-                    <li>candy cane</li>
-                    <li>cat o' nine teeth</li>
-                    <li>cheerful antler hat</li>
-                    <li>cheerful pajama pants</li>
-                    <li>chocolate filthy lucre</li>
-                    <li>cold hi mein</li>
-                    <li>cold nuggets</li>
-                    <li>cold wad</li>
-                    <li>cold water bottle</li>
-                    <li>cold-filtered water</li>
-                    <li>communal gobstopper</li>
-                    <li>Crimbo candied pecan</li>
-                    <li>Crimbo fudge</li>
-                    <li>Crimbo pie</li>
-                    <li>Crimbonium fuel rod</li>
-                    <li>crystal skull</li>
-                    <li>CSA cheerfulness ration</li>
-                    <li>day shortener</li>
-                    <li>delicious comfit?</li>
-                    <li>dieting pill</li>
-                    <li>druidic s'more</li>
-                    <li>drum machine</li>
-                    <li>elf army field rations</li>
-                    <li>elven hardtack</li>
-                    <li>elven magi-pack</li>
-                    <li>elven medi-pack</li>
-                    <li>elven squeeze</li>
-                    <li>Elvish delight</li>
-                    <li>executive mime flask</li>
-                    <li>FantasyRealm guest pass</li>
-                    <li>festive holiday hat</li>
-                    <li>flan del mar</li>
-                    <li>Flash Liquidizer Ultra Dousing Accessory</li>
-                    <li>Flaskfull of Hollow</li>
-                    <li>freezerburned ice cube</li>
-                    <li>frigid ninja stars</li>
-                    <li>frozen feather</li>
-                    <li>frozen shampoo-conditioner</li>
-                    <li>Giant black monolith</li>
-                    <li>government cheese</li>
-                    <li>Gratitude chocolate (bourbon-filled)</li>
-                    <li>green candy heart</li>
-                    <li>green snowcone</li>
-                    <li>half-digested coal</li>
-                    <li>handful of Smithereens</li>
-                    <li>herbal stuffing</li>
-                    <li>huge Crimbo cookie</li>
-                    <li>ice harvest</li>
-                    <li>Ice Island Long Tea</li>
-                    <li>inflatable LT&T telegraph office</li>
-                    <li>Inner Wisdom</li>
-                    <li>irradiated candy cane</li>
-                    <li>Jarlsberg's key lime</li>
-                    <li>Loathing Idol Microphone</li>
-                    <li>lost key</li>
-                    <li>lotion of coldness</li>
-                    <li>lucky cat's paw</li>
-                    <li>lump of Brituminous coal</li>
-                    <li>map to a candy-rich block</li>
-                    <li>mojo filter</li>
-                    <li>mother's necklace</li>
-                    <li>Mr. Accessaturday</li>
-                    <li>Notes from the Elfpocalypse, Chapter I</li>
-                    <li>Notes from the Elfpocalypse, Chapter II</li>
-                    <li>Notes from the Elfpocalypse, Chapter VI</li>
-                    <li>nut-shaped Crimbo cookie</li>
-                    <li>orange and black Crimboween candy</li>
-                    <li>oversized snowflake</li>
-                    <li>painting of a glass of wine</li>
-                    <li>pair of government shades</li>
-                    <li>pie man was not meant to eat</li>
-                    <li>piece of after eight</li>
-                    <li>pile of candy</li>
-                    <li>pile of gold coins</li>
-                    <li>pocket wish</li>
-                    <li>Polka Pop</li>
-                    <li>popular tart</li>
-                    <li>projectile icemaker</li>
-                    <li>purple snowcone</li>
-                    <li>Recipe of Before Yore: baked veggie ricotta</li>
-                    <li>Recipe of Before Yore: Boris's beer</li>
-                    <li>Recipe of Before Yore: Boris's bread</li>
-                    <li>Recipe of Before Yore: Calzone of Legend</li>
-                    <li>Recipe of Before Yore: Deep Dish of Legend</li>
-                    <li>Recipe of Before Yore: honey bun of Boris</li>
-                    <li>Recipe of Before Yore: Jarlsberg's vegetable soup</li>
-                    <li>Recipe of Before Yore: Pete's rich ricotta</li>
-                    <li>Recipe of Before Yore: Pete's wily whey bar</li>
-                    <li>Recipe of Before Yore: Pizza of Legend</li>
-                    <li>Recipe of Before Yore: plain calzone</li>
-                    <li>Recipe of Before Yore: ratatouille de Jarlsberg</li>
-                    <li>Recipe of Before Yore: roasted vegetable focaccia</li>
-                    <li>Recipe of Before Yore: roasted vegetable of J.</li>
-                    <li>Recipe of Before Yore: St. Pete's sneaky smoothie</li>
-                    <li>red snowcone</li>
-                    <li>resolution: be feistier</li>
-                    <li>resolution: be happier</li>
-                    <li>resolution: be kinder</li>
-                    <li>resolution: be luckier</li>
-                    <li>resolution: be more adventurous</li>
-                    <li>resolution: be sexier</li>
-                    <li>resolution: be smarter</li>
-                    <li>resolution: be stronger</li>
-                    <li>resolution: be wealthier</li>
-                    <li>shadow candy</li>
-                    <li>shushed potatoes</li>
-                    <li>silver cow skull</li>
-                    <li>sleeping patriotic eagle</li>
-                    <li>Sneaky Pete's key lime</li>
-                    <li>snow berries</li>
-                    <li>snow machine</li>
-                    <li>solid gold bowling ball</li>
-                    <li>Spooky VHS Tape</li>
-                    <li>St. Sneaky Pete's Whey</li>
-                    <li>stale cheer wine</li>
-                    <li>stale Cheer-E-Os</li>
-                    <li>Steal This Candy</li>
-                    <li>Stooper</li>
-                    <li>Supernova Champagne</li>
-                    <li>Taco Dan's Taco Stand Chillacious Churro</li>
-                    <li>Taco Dan's Taco Stand Chimichangarita</li>
-                    <li>Taco Dan's Taco Stand Taco</li>
-                    <li>tattered scrap of paper</li>
-                    <li>ten-leaf clover</li>
-                    <li>time's arrow</li>
-                    <li>tiny bottle of absinthe</li>
-                    <li>traditional Crimbo cookie</li>
-                    <li>Vegetable of Jarlsberg</li>
-                    <li>waffle</li>
-                    <li>warbear sequential gaiety distribution system</li>
-                    <li>water balloon</li>
-                    <li>Yeast of Boris</li>
+                        <li>abominable snowcone</li>
+                        <li>agua de vida</li>
+                        <li>antimatter wad</li>
+                        <li>Atomic Pop</li>
+                        <li>autumnal aegis</li>
+                        <li>black and white cracker</li>
+                        <li>blue snowcone</li>
+                        <li>Boris's key lime</li>
+                        <li>borrowed time</li>
+                        <li>bottle of antifreeze</li>
+                        <li>box of Familiar Jacks</li>
+                        <li>Bright Water</li>
+                        <li>bubblegum heart</li>
+                        <li>candy cane</li>
+                        <li>cat o' nine teeth</li>
+                        <li>cheerful antler hat</li>
+                        <li>cheerful pajama pants</li>
+                        <li>chocolate filthy lucre</li>
+                        <li>cold hi mein</li>
+                        <li>cold nuggets</li>
+                        <li>cold wad</li>
+                        <li>cold water bottle</li>
+                        <li>cold-filtered water</li>
+                        <li>communal gobstopper</li>
+                        <li>Crimbo candied pecan</li>
+                        <li>Crimbo fudge</li>
+                        <li>Crimbo pie</li>
+                        <li>Crimbonium fuel rod</li>
+                        <li>crystal skull</li>
+                        <li>CSA cheerfulness ration</li>
+                        <li>day shortener</li>
+                        <li>delicious comfit?</li>
+                        <li>dieting pill</li>
+                        <li>druidic s'more</li>
+                        <li>drum machine</li>
+                        <li>elf army field rations</li>
+                        <li>elven hardtack</li>
+                        <li>elven magi-pack</li>
+                        <li>elven medi-pack</li>
+                        <li>elven squeeze</li>
+                        <li>Elvish delight</li>
+                        <li>executive mime flask</li>
+                        <li>FantasyRealm guest pass</li>
+                        <li>festive holiday hat</li>
+                        <li>flan del mar</li>
+                        <li>Flash Liquidizer Ultra Dousing Accessory</li>
+                        <li>Flaskfull of Hollow</li>
+                        <li>freezerburned ice cube</li>
+                        <li>frigid ninja stars</li>
+                        <li>frozen feather</li>
+                        <li>frozen shampoo-conditioner</li>
+                        <li>Giant black monolith</li>
+                        <li>government cheese</li>
+                        <li>Gratitude chocolate (bourbon-filled)</li>
+                        <li>green candy heart</li>
+                        <li>green snowcone</li>
+                        <li>half-digested coal</li>
+                        <li>handful of Smithereens</li>
+                        <li>herbal stuffing</li>
+                        <li>huge Crimbo cookie</li>
+                        <li>ice harvest</li>
+                        <li>Ice Island Long Tea</li>
+                        <li>inflatable LT&T telegraph office</li>
+                        <li>Inner Wisdom</li>
+                        <li>irradiated candy cane</li>
+                        <li>Jarlsberg's key lime</li>
+                        <li>Loathing Idol Microphone</li>
+                        <li>lost key</li>
+                        <li>lotion of coldness</li>
+                        <li>lucky cat's paw</li>
+                        <li>lump of Brituminous coal</li>
+                        <li>map to a candy-rich block</li>
+                        <li>mojo filter</li>
+                        <li>mother's necklace</li>
+                        <li>Mr. Accessaturday</li>
+                        <li>Notes from the Elfpocalypse, Chapter I</li>
+                        <li>Notes from the Elfpocalypse, Chapter II</li>
+                        <li>Notes from the Elfpocalypse, Chapter VI</li>
+                        <li>nut-shaped Crimbo cookie</li>
+                        <li>orange and black Crimboween candy</li>
+                        <li>oversized snowflake</li>
+                        <li>painting of a glass of wine</li>
+                        <li>pair of government shades</li>
+                        <li>pie man was not meant to eat</li>
+                        <li>piece of after eight</li>
+                        <li>pile of candy</li>
+                        <li>pile of gold coins</li>
+                        <li>pocket wish</li>
+                        <li>Polka Pop</li>
+                        <li>popular tart</li>
+                        <li>projectile icemaker</li>
+                        <li>purple snowcone</li>
+                        <li>Recipe of Before Yore: baked veggie ricotta</li>
+                        <li>Recipe of Before Yore: Boris's beer</li>
+                        <li>Recipe of Before Yore: Boris's bread</li>
+                        <li>Recipe of Before Yore: Calzone of Legend</li>
+                        <li>Recipe of Before Yore: Deep Dish of Legend</li>
+                        <li>Recipe of Before Yore: honey bun of Boris</li>
+                        <li>Recipe of Before Yore: Jarlsberg's vegetable soup</li>
+                        <li>Recipe of Before Yore: Pete's rich ricotta</li>
+                        <li>Recipe of Before Yore: Pete's wily whey bar</li>
+                        <li>Recipe of Before Yore: Pizza of Legend</li>
+                        <li>Recipe of Before Yore: plain calzone</li>
+                        <li>Recipe of Before Yore: ratatouille de Jarlsberg</li>
+                        <li>Recipe of Before Yore: roasted vegetable focaccia</li>
+                        <li>Recipe of Before Yore: roasted vegetable of J.</li>
+                        <li>Recipe of Before Yore: St. Pete's sneaky smoothie</li>
+                        <li>red snowcone</li>
+                        <li>resolution: be feistier</li>
+                        <li>resolution: be happier</li>
+                        <li>resolution: be kinder</li>
+                        <li>resolution: be luckier</li>
+                        <li>resolution: be more adventurous</li>
+                        <li>resolution: be sexier</li>
+                        <li>resolution: be smarter</li>
+                        <li>resolution: be stronger</li>
+                        <li>resolution: be wealthier</li>
+                        <li>shadow candy</li>
+                        <li>shushed potatoes</li>
+                        <li>silver cow skull</li>
+                        <li>sleeping patriotic eagle</li>
+                        <li>Sneaky Pete's key lime</li>
+                        <li>snow berries</li>
+                        <li>snow machine</li>
+                        <li>solid gold bowling ball</li>
+                        <li>Spooky VHS Tape</li>
+                        <li>St. Sneaky Pete's Whey</li>
+                        <li>stale cheer wine</li>
+                        <li>stale Cheer-E-Os</li>
+                        <li>Steal This Candy</li>
+                        <li>Stooper</li>
+                        <li>Supernova Champagne</li>
+                        <li>Taco Dan's Taco Stand Chillacious Churro</li>
+                        <li>Taco Dan's Taco Stand Chimichangarita</li>
+                        <li>Taco Dan's Taco Stand Taco</li>
+                        <li>tattered scrap of paper</li>
+                        <li>ten-leaf clover</li>
+                        <li>time's arrow</li>
+                        <li>tiny bottle of absinthe</li>
+                        <li>traditional Crimbo cookie</li>
+                        <li>Vegetable of Jarlsberg</li>
+                        <li>waffle</li>
+                        <li>warbear sequential gaiety distribution system</li>
+                        <li>water balloon</li>
+                        <li>Yeast of Boris</li>
+                    </section>
                 </section>
             </article>
         </main>

@@ -47,17 +47,17 @@ main {
     height: 95vh;
     width: 80%;
     padding: 0.5em 1em;
+    border-radius: 4px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
 
 section {
     display: flex;
-    flex-direction: column;
     margin: 0 auto; /* Center the container horizontally */
     padding: 10px; /* Add padding to the container */
     border: 1px solid #ccc; /* Add border for clarity */
-    height: 30%;
     overflow: scroll;
+    flex-direction: column;
 }
 
 article {
@@ -91,11 +91,11 @@ img {
 /* ID styling */
 /* Add or remove columns and set their widths */
 #column-a {
-    flex:1;
+    flex: 1;
 }
 
 #column-b {
-    flex:2;
+    flex: 1;
 }
 
 #column-c {
@@ -111,13 +111,81 @@ img {
     justify-content: center;
     flex-direction: column;
     width: inherit;
+    overflow: scroll;
 }
 
 #row-2 {
     height: calc((100vh - 1em)*0.7);
     width: inherit;
+    display: flex;
 }
 /* 0.2 + 0.5 + 0.3 = 1 (or 100%)*/
 /* #row-3 {
     height: calc((100vh - 6em)*0.3);
 } */
+
+label {display: block;}
+
+blockquote {
+	display: block;
+	font-size: 0.85rem;
+	padding-left: 0.75rem;
+	border-left: 4px solid rgb(176, 109, 201);
+	margin-bottom: 1rem;
+	margin-top: 0.5rem;
+}
+
+blockquote p {
+	margin-bottom: 0.5rem;
+}
+
+.input {
+  display: block;
+  margin-bottom: 1rem;
+	line-height: 1.6;
+}
+
+.input label,
+.checklist > label {
+	display: block;
+	font-weight: bold;
+}
+
+.input input,
+.input select {
+	width: 100%;
+    display: block;
+	border-radius: 2px;
+	border: 1px solid #000;
+	padding: 0.375rem 0.5rem;
+	min-height: 2rem;
+	height: 2rem;
+}
+
+.checklist li {
+	list-style: none;
+	padding-left: 0.5rem;
+	margin-bottom: 0.25rem;
+}
+
+.checklist input {
+	margin-right: 0.25rem;
+}
+
+button {
+	width: 100%;
+	display: block;
+	cursor: pointer;
+	margin: 1.5rem 0;
+	background-color: rgb(176, 109, 201);
+	border-radius: 2px;
+	font-weight: bold;
+	padding: 0.75rem;
+	outline: none;
+	border: none;
+	color: #fff;
+}
+
+button:hover {
+	background-color: rgb(176, 109, 201);
+}
