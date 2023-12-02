@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //December array
     const dec = []
+    const winnerBox = ["Alium (#1933235)",2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+    const prizeBox = ["Polka Pop",2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+    count = -4
 
     console.log(today)
 
@@ -40,11 +43,35 @@ document.addEventListener('DOMContentLoaded', function () {
         expanderContent.className = 'expander-content';
 
         // Customize the content for each date
-        if (currentDate > today) {
-            expanderContent.textContent = `No Peeking!`;
+        var winner = ""
+        if (typeof winnerBox[count] === "number") {
+            winner = "TBA"
+            console.log("NUMBER")
         } else {
-            expanderContent.textContent = `Content for ${currentDate.toDateString()}`;
+            winner = `${winnerBox[count]}`
+            console.log("STRING")
         }
+
+        var prize = ""
+        if (typeof prizeBox[count] === "number") {
+            prize = "TBA"
+            console.log("NUMBER")
+        } else {
+            prize = `${prizeBox[count]}`
+            console.log("STRING")
+        }
+        
+        if (count < 0) {
+            expanderContent.textContent = ``;
+        } else {
+            if (currentDate > today) {
+                expanderContent.textContent = `No Peeking!`;
+            } else {
+                expanderContent.textContent = `Prize: ${prize}\nWinner: ${winner}`;
+            }
+        }
+
+        count += 1
         
         expander.appendChild(expanderContent);
         dayElement.appendChild(expander);
