@@ -1,7 +1,9 @@
 /**
  * POST /api/submit
  */
-const namespace = namespaceId;
+const envVarNamespaceId = namespaceId;
+const namespace = KVNamespace.create(envVarNamespaceId);
+
 export async function onRequestPost(context) {
   try {
     let input = await context.request.formData();
@@ -11,8 +13,7 @@ export async function onRequestPost(context) {
     const playerid = input.get('playerid');
 
     // Create a KV pair
-    const kvKey = `${playername}:${playerid}`;
-    await namespace.put(kvKey);
+    await namespace.put(playername, playerid);
 
     // Return a response indicating success
     return new Response('KV pair created successfully', {
