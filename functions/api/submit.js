@@ -1,7 +1,7 @@
 /**
  * POST /api/submit
  */
-
+const namespaceId = namespaceId;
 export async function onRequestPost(context) {
   try {
     let input = await context.request.formData();
