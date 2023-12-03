@@ -1,20 +1,25 @@
 fetch('https://kol.linzinha.is/players')
-  .then(response => response.json())
-  .then(data => {
-    const keys = Object.keys(data);
+.then(response => response.json())
+.then(data => {
+  // Extracting keys and values from each object in the array
+  const keyValuePairs = data.map(item => {
+    const key = Object.keys(item)[0];
+    const value = item[key];
+    return `${key} (#${value})`;
+  });
 
-    // Access the DOM element where you want to display the keys
-    const keysListContainer = document.getElementById('keysList');
+  // Access the DOM element where you want to display the keys
+  const keysListContainer = document.getElementById('keysList');
 
-    // Create a list element and append each key as a list item
-    const keysListElement = document.createElement('ol');
-    keys.forEach(key => {
-      const listItem = document.createElement('li');
-      listItem.textContent = key;
-      keysListElement.appendChild(listItem);
-    });
+  // Create an ordered list and append each key-value pair as a list item
+  const keysListElement = document.createElement('ol');
+  keyValuePairs.forEach(pair => {
+    const listItem = document.createElement('li');
+    listItem.textContent = pair;
+    keysListElement.appendChild(listItem);
+  });
 
-    // Append the list to the container in the HTML
-    keysListContainer.appendChild(keysListElement);
-  })
-  .catch(error => console.error('Error fetching JSON:', error));
+  // Append the ordered list to the container in the HTML
+  keysListContainer.appendChild(keysListElement);
+})
+.catch(error => console.error('Error fetching JSON:', error));
