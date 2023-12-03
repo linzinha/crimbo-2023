@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //December array
     const dec = []
-    const winnerBox = ["Alium (#1933235)",2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
-    const prizeBox = ["Polka Pop", "resolution: be more adventurous",3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+    const winnerBox = ["Alium (#1933235)","Sheber (#2949208)",3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+    const prizeBox = ["Polka Pop", "resolution: be more adventurous","resolution: be sexier",4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     count = -4
 
     console.log(today)
