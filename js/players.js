@@ -1,4 +1,4 @@
-fetch('https://kol.linzinha.is/players')
+fetch('https://kol.linzinha.is/data/players.json')
 .then(response => response.json())
 .then(data => {
   // Extracting keys and values from each object in the array
