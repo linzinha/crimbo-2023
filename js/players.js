@@ -1,3 +1,4 @@
+// use the endpoint https://kol.linzinha.is/players to fetch the latest data from the API and update the JSON file
 fetch('https://kol.linzinha.is/data/players.json')
 .then(response => response.json())
 .then(data => {
