@@ -1,20 +1,30 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Fetch external data
-    fetch("data/prizes.json")
-        .then(response => response.json())
-        .then(data => {
-            // Access the list of items
-            const items = data.items;
+fetch('https://kol.linzinha.is/data/prizes.json')
+    .then(response => response.json())
+    .then(data => {
+        // Check if the 'prizes' array exists in the data
+        const prizes = data.prizes;
 
-            // Get the ordered list element
-            const orderedList = document.getElementById("prizes");
-
-            // Populate the ordered list with items
-            items.forEach(item => {
-                const listItem = document.createElement("li");
-                listItem.textContent = item;
-                orderedList.appendChild(listItem);
+        if (prizes && Array.isArray(prizes)) {
+            // Extracting keys and values from each object in the array
+            const keyValuePairs = prizes.map(prize => {
+                return `${prize}`;
             });
-        })
-        .catch(error => console.error("Error fetching data:", error));
-});
+
+            // Access the DOM element where you want to display the prizes
+            const prizesListContainer = document.getElementById('prizes');
+
+            // Create an ordered list and append each prize as a list item
+            const prizesListElement = document.createElement('ol');
+            keyValuePairs.forEach(prize => {
+                const listItem = document.createElement('li');
+                listItem.textContent = prize;
+                prizesListElement.appendChild(listItem);
+            });
+
+            // Append the ordered list to the container in the HTML
+            prizesListContainer.appendChild(prizesListElement);
+        } else {
+            console.error("Data format error: 'prizes' array not found or not an array.");
+        }
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
