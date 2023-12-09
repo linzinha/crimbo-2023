@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //December array
     const dec = []
-    const winnerBox = ["Alium (#1933235)","Sheber (#2949208)","chocofungi (#2188317)","Avandor (2002786)","Norimvo (#3451900)","Vulcan9009 (#2038091)"," Jimmyking (#3272033) ","The Patron Saint of Depravity (#1581073)",9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+    const winnerBox = ["Alium (#1933235)","Sheber (#2949208)","chocofungi (#2188317)","Avandor (2002786)","Norimvo (#3451900)","Vulcan9009 (#2038091)"," Jimmyking (#3272033) ","The Patron Saint of Depravity (#1581073)","StuBorn (#1852283)",10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     const prizeBox = ["Polka Pop", "resolution: be more adventurous","resolution: be sexier","druidic s'more","cold hi mein","Snow Machine","piece of after eight","The Fun-Guy Cold Weather Bartender's Guide","Recipe of Before Yore: Boris's bread",10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     count = -4
 
