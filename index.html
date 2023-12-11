@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/calendar.css">
+    <title>An Adventurer is [Name]</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">KoL, an adventurer is [Someone]</a>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Info</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="#" onclick="showPage('prizes')">Prize Showcase</a></li>
+                <li><a href="#" onclick="showPage('players')">Players</a></li>
+                <li><a href="#" onclick="showPage('winners')">Winners</a></li>
+                <li><a href="#" onclick="showPage('donors')">Dornors Corner</a></li>
+                <li><a href="kol-projects.html">KoL Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <aside>
+            <h2>News and Updates</h2>
+            <p><strong><time datetime="2023-12-11">December 11th</time></strong></p>
+            <ul>
+                <li>Massive revamp on the site - still unlikely to be mobile-friendly, but it
+                    should be a little bit easier on the eyes (I hope)
+                </li>
+            </ul>
+            <p><strong><time datetime="2023-12-10">December 10th</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations Kemistry!</li>
+            </ul>
+            <p><strong><time datetime="2023-12-09">December 9th</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations StuBorn!</li>
+            </ul>
+            <p><strong><time datetime="2023-12-08">December 8th</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations The Patron Saint of Depravity!</li>
+            </ul>
+            <p><strong><time datetime="2023-12-07">December 7th</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations Jimmyking!</li>
+            </ul>
+            <p><strong><time datetime="2023-12-06">December 6th</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations Vulcan9009!</li>
+                <li>Prize information has been moved off the fron\'t page, to its own page.</li>
+            </ul>
+            <p><strong><time datetime="2023-12-05">December 5th</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations Norimvo!</li>
+            </ul>
+            <p><strong><time datetime="2023-12-04">December 4th</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations Avandor!</li>
+            </ul>
+            <p><strong><time datetime="2023-12-03">December 3rd</time></strong></p>
+            <p>
+                <ul>
+                    <li>Winner announced - congratulations chocofungi!</li>
+                    <li><strong>Sign up button is reenabled, please use the form instead</strong></li>
+                    <li><del>Sign up button disabled for now - please kmail Khlamedaea[#1866694] for new entries while server issues are addressed</del></li>
+                </ul>
+            </p>
+            <p><strong><time datetime="2023-12-02">December 2nd</time></strong></p>
+            <p>
+                <ul>
+                    <li>Upgraded to incredible 3 Column technology</li>
+                    <li>Added a submit button. <del>It may not work yet but it looks nice?</del> It functions! Please use that instead</li>
+                    <li>Winner announced - congratulations Sheber!</li>
+                </ul>
+            </p>
+            <p><strong><time datetime="2023-12-01">December 1st</time></strong></p>
+            <ul>
+                <li>Winner announced - congratulations Alium!</li>
+            </ul>
+            <p><strong><time datetime="2023-11-19">November 19th</time></strong></p>
+            <p>
+                <ul>
+                    <li>First Published version of this site, it is terrible but we persevere.</li>
+                </ul>
+            </p>
+        </aside>
+        <main>
+            <article id="row-1">
+                <i>Note: this site is extremely WIP and also I am a hobbyist</i>
+                <p>
+                    To go along with Crimbo, I have decided to do a very simple giveaway. One prize per person per day. 
+                    The prize and person are both pulled from their respective queues.
+                </p>
+            </article>
+            <article id="row-2">
+                <section id="left">
+                    <h2>Join Here:</h2>
+                    <form method="POST" action="/api/submit">
+                        <label for="playername">Player Name</label>
+                        <input id="playername" type="text" name="playername" required />
+                      
+                        <label for="playerid">Player ID</label>
+                        <input id="playerid" type="number" name="playerid" required />
+                      
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+                <section id="home"  class="content">
+                    <h2>FAQ</h2>
+                    <h3>How can I play?</h3>
+                    <p>
+                        The easiest, best method is this form below. If it's not working or you're really not comfortable, 
+                        you can kmail me but this is the best way to make sure you're included.
+                    </p>
+                    <h3>I got an error submitting my player name</h3>
+                    <p>
+                        If you get an error, doublecheck that your name isn't already on the list. If it's not, kmail me!
+                    </p>
+                    <h3>Where's my name?</h3>
+                    <p>
+                        It could be a number of reasons, actually.
+                        <ul>
+                            <li>
+                                <strong>This data is updated manually</strong> to make the page load more quickly: If you want 
+                                to see realtime data to verify that your name was added, you can <a href="https://kol.linzinha.is/players"> 
+                                check the storage endpoint here</a>, but note that it can take a good 8 seconds to load
+                            </li>
+                            <li><strong>The content is cached in your browser</strong>: try an incognito window</li>
+                            <li><strong>You entered your name beginning with a lowercase letter</strong>: Check after all the uppercase names</li>
+                        </ul>
+                    </p>
+                    <h3>How does it work?</h3>
+                    <p>
+                        Each day I will randomize the winner of the day, and then the prize for the next day in /games. The timing has varied wildly
+                         and will continue to do so because I lack consistency, BUT it is between 7 and 9pm UTC most of the time.
+                    </p>
+                    <h3>Oh no my prize sucks!</h3>
+                    <p>
+                        It may secretly be amazing! The item drawn may be a REPRESENTATION of what you've won, but the actual prize will always
+                        be of equal or greater value than the item drawn.
+                    </p>
+                    <h3>Do I have to reenter every day?</h3>
+                    <p>
+                        Nope! If I do a call for entries, its just to get new/more people to join in the fun
+                    </p>
+                    <h3>Can I contribute?</h3>
+                    <p>
+                        If you like! However contributions are neither expected nor required. You can either send me items to add to my Display Case 
+                        (the official prize vault), OR if you prefer to do so for high value items you can promise to deliver the item to the winner 
+                        yourself. In that case I will list your ingame name next to the item to ID you as the owner of the prize.
+                    </p>
+                    <h3>How can I contribute?</h3>
+                    <p>
+                        Send me a kmail with your contribution or the name of the item you want me to list if you're holding onto it
+                        <ul>
+                            <li>
+                                Please tell me exactly what you want me to do with any items sent! For example:
+                                <li>
+                                    Do you want me to list you anonymously?
+                                </li>
+                                <li>
+                                    Are you donating an item to be auctioned?
+                                </li>
+                                <li>
+                                    Is it a financial contribution to improve the prize pool?
+                                </li>
+                                <li>
+                                    Is it something else?
+                                </li>
+                                <li>
+                                    If the item isn't drawn, do you want it back?
+                                </li>
+                            </li>
+                        </ul>
+                    </p>
+                    <h3>What are you going to do with undrawn items</h3>
+                    <p>
+                        Right now, unless someone explicitly tells me to keep something I am going to either keep drawing until the pot is empty, 
+                        give donations back, or both. Right now I am strongly leaning toward a lightning game of ARs in /games on the final day until
+                        everything is won.
+                    </p>
+                </section>
+                <section id="prizes" class="content">
+                    <h2>Prizes</h2>
+                    <p>
+                        This is a list of items included in the giveaway. For more inforation on what you may receive, see the FAQ
+                    </p>
+                    <p id="prizes"></p>
+                </section>
+                <section id="players" class="content">
+                    <h2>Players</h2>
+                    <p>Make sure your name is here and your player id is correct!</p>
+                    <p id="players"></p>
+                </section>
+                <section id="winners" class="content">
+                    <h2>Winners</h2>
+                    <div class="calendar" id="calendar"></div>
+                    <p id="winners"></p>
+                </section>
+                <section id="donors" class="content">
+                    <h2>Donor Recognition</h2>
+                    <p>
+                        I'm including this section for full transparency and accountability regarding the items people have donated. This will also
+                        ensure I don't miss something and accidentally mishandle my inventory. Please let me know if you wish to remain anonymous at donation, or
+                        if you would like your name removed!
+                    </p>
+                    <h2>Donors</h2>
+                    <ul>
+                        <li>festive holiday hat x3<small> - MARCOP0LO</small></li>
+                        <li>gingerbeard<small> - freddyjoehanson</small></li>
+                        <li>carnivorous potted plant<small> - freddyjoehanson</small></li>
+                        <li>warehouse key<small> - freddyjoehanson</small></li>
+                        <li>fuzzy polar bear ears<small> - freddyjoehanson</small></li>
+                        <li>boxed gumball machine<small> - freddyjoehanson</small></li>
+                        <li>Pack of Alice's Army Foil Cards<small> - freddyjoehanson</small></li>
+                        <li>Crimbosmopolitan x25<small> - freddyjoehanson</small></li>
+                        <li>cursed pirate cutlass<small> - freddyjoehanson</small></li>
+                        <li>antique nutcracker - figuri<small> - freddyjoehanson</small></li>
+                        <li>Crimbo candle<small> - freddyjoehanson</small></li>
+                        <li>earthenware muffin tin<small> - freddyjoehanson</small></li>
+                        <li>antique nutcracker figurine<small> - KoL Miners Daughter</small></li>
+                        <li>snowpack<small> - KoL Miners Daughter</small></li>
+                        <li>pumpkin x10<small> - KoL Miners Daughter</small></li>
+                        <li>tiny die-cast Father Crimborg<small> - KoL Miners Daughter</small></li>
+                        <li>potato alarm clock<small> - Kemistry</small></li>
+                        <li>solid shifting time weirdness<small> - Ruler_of_Hell</small></li>
+                        <li>bottle of Sacramento wine x3<small> - Gawea</small></li>
+                        <li>festive egg sac<small> - MontyPythn</small></li>
+                        <li>deactivated mini-Trainbot<small> - MontyPythn</small></li>
+                        <li>potato alarm clock<small> - MontyPythn</small></li>
+                        <li>cloning kit<small> - MontyPythn</small></li>
+                        <li>loaf of shadow bread x15<small> - Anonymous</small></li>
+                        <li>shadow brick x15<small> - Anonymous</small></li>
+                        <li>length of shadow sinew x15<small> - Anonymous</small></li>
+                        <li>blobs of shadow nectar x15<small> - Anonymous</small></li>
+                        <li>designer handbag<small> - Anonymous</small></li>
+                        <li>The Fun-Guy Cold Weather Bartender's Guide<small> - Anonymous</small></li>
+                        <li>Mr. Accessory<small> - Anonymous</small></li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+    </div>
+    <footer>
+        <p>2023 - Content originated by Khlamedaea[#1866694] is free to use in whatever way you want.</p>
+        <p>2023 - Content NOT originated by Khlamedaea[#1866694] is not mine so ask its parents.</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/prizes.js"></script>
+    <script src="js/players.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>

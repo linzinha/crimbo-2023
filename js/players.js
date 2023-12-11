@@ -1,26 +1,39 @@
-// use the endpoint https://kol.linzinha.is/players to fetch the latest data from the API and update the JSON file
+// Fetch the external JSON file
 fetch('https://kol.linzinha.is/data/players.json')
-.then(response => response.json())
-.then(data => {
-  // Extracting keys and values from each object in the array
-  const keyValuePairs = data.map(item => {
-    const key = Object.keys(item)[0];
-    const value = item[key];
-    return `${key} (#${value})`;
-  });
+  .then(response => response.json())
+  .then(data => {
+    // Create an array to store list items for each player
+    var playerListItemArray = [];
+    data.sort((a, b) => {
+      var nameA = Object.keys(a)[0].toLowerCase();
+      var nameB = Object.keys(b)[0].toLowerCase();
+      return nameA.localeCompare(nameB);
+    });
 
-  // Access the DOM element where you want to display the keys
-  const keysListContainer = document.getElementById('keysList');
+    // Loop through each item in the array
+    data.forEach(item => {
+      // Extract the required information for each player
+      var playerName = Object.keys(item)[0];
+      var playerScore = item[playerName];
 
-  // Create an ordered list and append each key-value pair as a list item
-  const keysListElement = document.createElement('ol');
-  keyValuePairs.forEach(pair => {
-    const listItem = document.createElement('li');
-    listItem.textContent = pair;
-    keysListElement.appendChild(listItem);
-  });
+      // Create list item for the current player
+      var playerListItem = document.createElement('li');
+      playerListItem.textContent = playerName + ' (#' + playerScore + ')';
+      
+      // Add the list item to the array
+      playerListItemArray.push(playerListItem);
+    });
 
-  // Append the ordered list to the container in the HTML
-  keysListContainer.appendChild(keysListElement);
-})
-.catch(error => console.error('Error fetching JSON:', error));
+    // Create an ordered list element
+    var orderedList = document.createElement('ol');
+    
+    // Append each list item to the ordered list
+    playerListItemArray.forEach(item => {
+      orderedList.appendChild(item);
+    });
+
+    // Display the ordered list
+    // Assuming you have an element with the id 'output' where you want to display the result
+    document.getElementById('players').appendChild(orderedList);
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
