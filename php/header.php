@@ -1,5 +1,4 @@
-<?php
-echo '<a href="index.html">KoL, an adventurer is [Someone]</a>
+<a href="index.html">KoL, an adventurer is [Someone]</a>
 <nav>
     <ul>
         <li><a href="index.html">Info</a></li>
@@ -8,5 +7,4 @@ echo '<a href="index.html">KoL, an adventurer is [Someone]</a>
         <li><a href="kol-projects.html">KoL Projects</a></li>
         <li><a title="under construction" href="#">Other Projects</a></li>
     </ul>
-</nav>';
-?>
+</nav>

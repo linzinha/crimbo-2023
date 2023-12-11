@@ -1,5 +1,4 @@
-<?php
-echo '<h2>News and Updates</h2>
+<h2>News and Updates</h2>
 <p><strong><time datetime="2023-12-09">December 9th</time></strong></p>
 <ul>
     <li>Winner announced - congratulations StuBorn!</li>
@@ -50,5 +49,4 @@ echo '<h2>News and Updates</h2>
     <ul>
         <li>First Published version of this site, it is terrible but we persevere.</li>
     </ul>
-</p>';
-?>
+</p>
