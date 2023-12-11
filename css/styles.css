@@ -1,26 +1,46 @@
-/* Reset some default styles for better cross-browser consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set a baseline font size and font family */
-body {
-    font-family: Arial, sans-serif;
-    font-size: 0.9em;
+*::-webkit-scrollbar {
+    background-color: transparent;
+    width: 12px;
 }
 
-/* Style headings, links, and text */
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-color: rgba(0,0,0,0.3);
+    background-clip: content-box;
+}
+
+body {
+    overflow: overlay;
+    background-color: #170C13;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #F3E9F0;
+}
+
 h1, h2, h3 {
     font-weight: bold;
+    color: #CFA5BE;
+}
+
+h2, h3 {
+    padding-top: 1em;
 }
 
 a {
     text-decoration: none;
-    color: #b06dc9;
+    color: #70B2B1;
 }
-
 
 /* element styling */
 header {
@@ -33,7 +53,6 @@ header {
     overflow: overlay;
 }
 
-
 aside {
     position: relative;
     height: 97vh;
@@ -42,37 +61,10 @@ aside {
     top: -1em;
 }
 
-main {
-    flex-direction: column;
-    height: 95vh;
-    width: 80%;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
 section {
-    display: flex;
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 10px; /* Add padding to the container */
-    border: 1px solid #ccc; /* Add border for clarity */
-    overflow: scroll;
-    flex-direction: column;
+    padding: 1em;
 }
 
-article {
-    position: relative;
-    display: block;
-}
-
-footer {
-    position: sticky;
-    bottom: 0;
-    z-index: 1000;
-    padding: 0 2em;
-}
-
-/* Add some basic styles for buttons */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -82,67 +74,10 @@ footer {
     cursor: pointer;
 }
 
-/* Style images to be responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ID styling */
-/* Add or remove columns and set their widths */
-#column-a {
-    flex: 1;
-}
-
-#column-b {
-    flex: 1;
-}
-
-#column-c {
-    flex: 1;
-}
-
-/* Add or remove rows and set their heights */
-
-/* 0.2 == 20% of the total height minus the header + footer heights */
-#row-1 {
-    height: calc((100vh - 1em)*0.2);
-    /* styles set lower overwrite earlier settings */
-    justify-content: center;
-    flex-direction: column;
-    width: inherit;
-    overflow: scroll;
-}
-
-#row-2 {
-    height: calc((100vh - 1em)*0.7);
-    width: inherit;
-    display: flex;
-}
-/* 0.2 + 0.5 + 0.3 = 1 (or 100%)*/
-/* #row-3 {
-    height: calc((100vh - 6em)*0.3);
-} */
-
-label {display: block;}
-
-blockquote {
-	display: block;
-	font-size: 0.85rem;
-	padding-left: 0.75rem;
-	border-left: 4px solid rgb(176, 109, 201);
-	margin-bottom: 1rem;
-	margin-top: 0.5rem;
-}
-
-blockquote p {
-	margin-bottom: 0.5rem;
-}
-
 .input {
-  display: block;
-  margin-bottom: 1rem;
-	line-height: 1.6;
+    display: block;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .input label,
@@ -176,14 +111,21 @@ button {
 	color: #fff;
 }
 
-button:hover {
-	background-color: rgb(176, 109, 201);
+#wrapper {
+    position: relative;
+    display: flex;
+    height: 95vh;
+    width: 100%;
+    flex-direction: row;
 }
 
-.half-section {
-    height: 50%;
+#row-1 {
+    height: calc((100vh - 1em)*0.2);
+    justify-content: center;
 }
 
-ol {
-    margin: 10px 25px;
+#row-2 {
+    height: calc((100vh - 1em)*0.7);
+    display: flex;
+    overflow: scroll;
 }
