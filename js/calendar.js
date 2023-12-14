@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
         "The Patron Saint of Depravity",
         "StuBorn",
         "Kemistry",
-        "KoL Miners Daughter",12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+        "KoL Miners Daughter",
+        "lala_lola",
+        "Chenny",
+        "CZARWHUZHERE666",15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     const prizeBox = [
         "Polka Pop",
         "resolution: be more adventurous",
@@ -41,7 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
         "Recipe of Before Yore: Boris's bread",
         "elven medi-pack",
         "waffle",
-        "length of shadow sinew",13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+        "length of shadow sinew",
+        "time arrow",
+        "Cloning Kit",
+        "Jarlsberg's key lime",16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     count = -4
 
     console.log(today)
