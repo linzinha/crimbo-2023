@@ -1,5 +1,6 @@
 {
     "prizes": [
+        "11-leaf clover",
         "abominable snowcone",
         "agua de vida",
         "antimatter wad",
@@ -10,6 +11,7 @@
         "Boris's key lime",
         "borrowed time",
         "bottle of antifreeze",
+        "bottle of Crimbognac",
         "bottle of Sacramento wine",
         "box of Familiar Jacks",
         "boxed gumball machine",
@@ -21,14 +23,16 @@
         "cheerful antler hat",
         "cheerful pajama pants",
         "chocolate filthy lucre",
-        "cloning kit",
         "communal gobstopper",
+        "cool jelly donut",
         "Crimbo candied pecan",
         "Crimbo candle",
         "Crimbo fudge",
         "Crimbo pie",
+        "Crimbo tattoo kit",
         "Crimbonium fuel rod",
         "Crimbosmopolitan",
+        "Crimboysters Rockefeller",
         "crystal skull",
         "CSA cheerfulness ration",
         "cursed pirate cutlass",
@@ -54,6 +58,7 @@
         "frozen feather",
         "frozen shampoo-conditioner",
         "fuzzy polar bear ears",
+        "Game Grid token (230)",
         "Giant black monolith",
         "gingerbeard",
         "government cheese",
@@ -77,6 +82,7 @@
         "lump of Brituminous coal",
         "map to a candy-rich block",
         "mojo filter",
+        "mother's necklace",
         "Mr. Accessaturday",
         "Mr. Accessory",
         "Notes from the Elfpocalypse, Chapter I",
@@ -116,6 +122,7 @@
         "stale cheer wine",
         "stale Cheer-E-Os",
         "Steal This Candy",
+        "Stooper",
         "Supernova Champagne",
         "Sweat Ade",
         "Taco Dan's Taco Stand Chillacious Churro",
@@ -128,7 +135,6 @@
         "traditional Crimbo cookie",
         "warbear sequential gaiety distribution system",
         "warehouse key",
-        "water balloon",
-        "white candy heart"
+        "water balloon"
     ]
 }
