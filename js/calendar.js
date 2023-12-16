@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "KoL Miners Daughter",
         "lala_lola",
         "Chenny",
-        "CZARWHUZHERE666",15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+        "CZARWHUZHERE666",
+        "DarkDeath",16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     const prizeBox = [
         "Polka Pop",
         "resolution: be more adventurous",
@@ -47,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "length of shadow sinew",
         "time arrow",
         "Cloning Kit",
-        "Jarlsberg's key lime",16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+        "Jarlsberg's key lime",
+        "mojo filter",17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     count = -4
 
     console.log(today)
