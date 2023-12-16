@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "lala_lola",
         "Chenny",
         "CZARWHUZHERE666",
-        "DarkDeath",16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+        "DarkDeath",
+        "Jimmy Neutral",17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     const prizeBox = [
         "Polka Pop",
         "resolution: be more adventurous",
