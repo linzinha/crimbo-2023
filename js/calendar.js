@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "CZARWHUZHERE666",
         "DarkDeath",
         "Jimmy Neutral",
-        "SandMan10K",18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+        "SandMan10K (#3485114)",18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     const prizeBox = [
         "Polka Pop",
         "resolution: be more adventurous",
@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "Cloning Kit",
         "Jarlsberg's key lime",
         "mojo filter",
-        "warbear sequential gaiety distribution system",18,19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
+        "warbear sequential gaiety distribution system",
+        "festive holiday hat",19,20,21,22,23,24,25,26,27,28,29,30,31,1,2]
     count = -4
 
     console.log(today)
